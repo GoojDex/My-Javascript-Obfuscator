@@ -1,55 +1,47 @@
-window.document.getElementById("ma50").parentNode.removeChild(window.document.getElementById("ma50")),
-    function (s, l) {
-        function e(e) {
-            e && ma50.nextFunction()
-        }
-        var c = s.document,
-            o = ["i", "s", "u"];
-        e.prototype = {
-            rand: function (e) {
-                return Math.floor(Math.random() * e)
-            },
-            getElementBy: function (e, t) {
-                return e ? c.getElementById(e) : c.getElementsByTagName(t)
-            },
-            getStyle: function (e) {
-                var t = c.defaultView;
-                return t && t.getComputedStyle ? t.getComputedStyle(e, null) : e.currentStyle
-            },
-            deferExecution: function (e) {
-                setTimeout(e, 2e3)
-            },
-            insert: function (e, t) {
-                var n = c.createElement("span"),
-                    a = c.body,
-                    d = a.childNodes.length,
-                    o = a.style,
-                    i = 0,
-                    r = 0;
-                if ("ma50" == t) {
-                    for (n.setAttribute("id", t), o.margin = o.padding = 0, o.height = "100%", d = this.rand(d); i < d; i++) 1 == a.childNodes[i].nodeType && (r = Math.max(r, parseFloat(this.getStyle(a.childNodes[i]).zIndex) || 0));
-                    r && (n.style.zIndex = r + 1), d++
-                }
-                n.innerHTML = e, a.insertBefore(n, a.childNodes[d - 1])
-            },
-            
-            
-                    o = this,
-                    i = o.getElementBy(0, "script"),
-                    r = i.length - 1;
-                for (c.write = null, c.writeln = null; 0 <= r; --r)
-                    if (d[e = i[r].src.substr(7, 20)] !== l) return (n = c.createElement("script")).type = "text/javascript", n.src = i[r].src, s[t = d[e]] = l, n.onload = n.onreadystatechange = function () {
-                        a = this, s[t] !== l || a.readyState && "loaded" !== a.readyState && "complete" !== a.readyState || (s[t] = n.onload = n.onreadystatechange = null, i[0].parentNode.removeChild(n))
-                    }, i[0].parentNode.insertBefore(n, i[0]), void o.deferExecution(function () {
-                        if (s[t] === l) return $("html").css("overflow", "hidden");
-                        o.displayMessage(n.src), o.nextFunction()
-                    });
-                o.nextFunction()
-            },
-            
-            nextFunction: function () {
-                var e = o[0];
-                e !== l && (o.shift(), this[e]())
-            }
-        }, s.ma50 = ma50 = new e, c.addEventListener ? s.addEventListener("load", e, !1) : s.attachEvent("onload", e)
-    }(window)
+ var font = localStorage.getItem("ta_font");
+$("#main textarea, .main textarea, .widget-body input").css("font-family", font);
+var size = localStorage.getItem("ta_size");
+$(".widget-body textarea").css("font-size", size);
+var spellcheck = JSON.parse(localStorage.getItem("ta_spellcheck"));
+$(".widget-body textarea, .widget-body input").attr("spellcheck", spellcheck);
+var textwrap = JSON.parse(localStorage.getItem("ta_textwrap"));
+
+function Alert(t) {
+    $(".alert-content").html(t), $(".alert").show()
+}
+
+function Toast(t) {
+    $(".toast-content").html(t), $(".toast").show().delay(2e3).fadeOut(250)
+}
+
+function Clipboard(t) {
+    t.select().focus(), document.execCommand("copy"), Toast("Copied to Clipboard")
+}
+
+function default_settings() {
+    localStorage.setItem("ta_language", "English"), localStorage.setItem("ta_theme", "Light"), localStorage.setItem("ta_font", "Roboto"), localStorage.setItem("ta_size", "15px"), localStorage.setItem("ta_spellcheck", !1), localStorage.setItem("ta_textwrap", !0), localStorage.setItem("ta_examples", !0)
+}
+0 == textwrap && $(".widget-body textarea").addClass("wrap-off"), $("#app_menu").click(function () {
+    $("#nav-menu").toggleClass("open"), $(".mask").addClass("active")
+}), $("body").mouseup(function (t) {
+    0 === $(t.target).closest("#nav-menu").length && ($("#nav-menu").removeClass("open"), $(".mask").removeClass("active"))
+}), $(".accordion>li>a:not(:only-child)").click(function (t) {
+    var e = $(this).closest("li").find("ul");
+    $(this).closest(".accordion").find("ul").not(e).slideUp(100), $(this).hasClass("active") ? $(this).removeClass("active") : ($(this).closest(".accordion").find("a.active").removeClass("active"), $(this).addClass("active")), e.stop(!1, !0).slideToggle(100), t.preventDefault()
+}), $("body").ready(function () {
+    $(document).on("click", ".dropdown-trigger", function (t) {
+        $(this).siblings().show(), $(this).parent().siblings().each(function (t, e) {
+            $(e).find(".dropdown-menu").hide()
+        })
+    })
+}), $("body").mouseup(function (t) {
+    var e = $(".dropdown-menu");
+    e.is(t.target) || e.hide()
+}), $(".alert-x").click(function () {
+    $(".alert").hide()
+}), $("#share_this").click(function () {
+    var t = window.location.href;
+    return window.open("https://www.addtoany.com/share#url=" + escape(t), "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=670"), !1
+}), $('a[href="#"]').click(function (t) {
+    t.preventDefault ? t.preventDefault() : t.returnValue = !1
+}), localStorage.getItem("ta_language") || default_settings();
