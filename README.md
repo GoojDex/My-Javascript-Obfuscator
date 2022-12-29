@@ -1,4 +1,4 @@
-# My-Obfuscator
+# My-Javascript-Obfuscator
 
 ![Logo](assets/images/icons/icon-128x128.png)
 
@@ -6,15 +6,7 @@ My JavaScript Obfuscator and Packer
 
 ## Helper
 
-The **Unreadable** option is disabled by default, because it uses data from [JS Nice](http://www.jsnice.org/). This cannot be done with JavaScript. You need to install UserScript [de4js_helper.user.js](https://github.com/lelinhtinh/de4js/blob/master/userscript/de4js_helper.user.js) to enable it.
-
-Install one of the following links:
-
-- [Open User JS](https://openuserjs.org/scripts/baivong/de4js_helper)
-- [Greasy Fork](https://greasyfork.org/vi/scripts/33479-de4js-helper)
-- [Github](https://lelinhtinh.github.io/de4js/userscript/de4js_helper.user.js)
-
-`*` _**de4js helper** doesn't work offline._
+The **Unreadable** option is disabled by default, because it uses data from [JS Nice](http://www.jsnice.org/). This cannot be done with JavaScript. 
 
 ## Features
 
@@ -36,72 +28,6 @@ Install one of the following links:
   - [AAencode](http://utf-8.jp/public/aaencode.html)
   - [WiseLoop](http://wiseloop.com/demo/php-javascript-obfuscator)
 
-## Running with Docker
-
-    docker-compose up
-
-Preview **de4js** in your web browser at <http://localhost:4000/de4js/>
-
-### Attach Shell
-
-    docker exec -it de4js_app bash
-    bundle exec jekyll build
-
-## Local Development
-
-### Install
-
-    git clone https://github.com/lelinhtinh/de4js.git
-    cd de4js
-
-If you don't have Ruby installed, install [Ruby 2.1.0 or higher](https://www.ruby-lang.org/en/downloads/).
-
-Fix missing libraries on **Ubuntu**:
-
-    sudo apt install ruby-dev zlib1g-dev
-
-Install **Bundler**:
-
-    gem install bundler
-
-Install **Jekyll** and other [dependencies](https://pages.github.com/versions/) from the GitHub Pages gem:
-
-    bundle install
-
-Fix EventMachine C extension not loading on **Windows 10**:
-
-    gem uninstall eventmachine
-    gem install eventmachine --platform ruby
-
-Install Workbox CLI:
-
-    npm install workbox-cli --global
-
-### Start serve
-
-    npm start
-
-Or, with livereload:
-
-    npm run watch
-
-Preview **de4js** in your web browser at <http://localhost:4000/de4js/>
-
-### Build
-
-    npm run build
-
-## License
-
-[MIT License](https://baivong.mit-license.org/) © [lelinhtinh](https://github.com/lelinhtinh)
-
-## Credits
-
-### Active Contributors
-
-- [lelinhtinh](https://github.com/lelinhtinh)
-- [Himura2la](https://github.com/Himura2la)
-- [Flleeppyy](https://github.com/flleeppyy)
 
 ### Open Source Contributors
 
