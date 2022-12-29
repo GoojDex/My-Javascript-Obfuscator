@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
 	font-family: icons;
 	src: url(fonts/icons.eot?l77ujl);
 	src: url(fonts/icons.eot?l77ujl#iefix) format('embedded-opentype'), url(fonts/icons.ttf?l77ujl) format('truetype'), url(fonts/icons.woff?l77ujl) format('woff'), url(fonts/icons.svg?l77ujl#icons) format('svg');
@@ -258,11 +258,10 @@ i {
 .i-asterisk:before {
 	content: "\2731"
 }
-    
-    
- 
-    
-    html {
+  
+  
+  
+  html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	
@@ -1905,10 +1904,6 @@ footer a:hover {
 		display: none
 	}
 }
-    
-    
-    
-    
-    
-    #output_text{height:522px}	#input_colA,#input_colB{height:456px;}	@media (max-width: 768px){	#output_text,#input_colA,#input_colB{height:400px}	}	@media (max-width: 414px){	#output_text,#input_colA,#input_colB{height:514px}	}	@media (max-width: 412px){	#output_text,#input_colA,#input_colB{height:509px}	}	@media (max-width: 384px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 375px){	#output_text,#input_colA,#input_colB{height:445px}	}	@media (max-width: 360px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 320px){	#output_text,#input_colA,#input_colB{height:346px}	}
- #ma50{position:fixed!important;position:absolute;top:-1px;top:expression((t=document.documentElement.scrollTop?document.documentElement.scrollTop:document.body.scrollTop)+"px");left:2px;width:105%;height:105%;background-color:#181d23;opacity:105;display:block;padding-top:20%}#ma50 *{text-align:center;margin:0 auto;display:block;filter:none;font:bold 14px Verdana,Arial,sans-serif;text-decoration:none}#ma50~*{display:none}
+  
+  
+ #output_text{height:522px}	#input_colA,#input_colB{height:456px;}	@media (max-width: 768px){	#output_text,#input_colA,#input_colB{height:400px}	}	@media (max-width: 414px){	#output_text,#input_colA,#input_colB{height:514px}	}	@media (max-width: 412px){	#output_text,#input_colA,#input_colB{height:509px}	}	@media (max-width: 384px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 375px){	#output_text,#input_colA,#input_colB{height:445px}	}	@media (max-width: 360px){	#output_text,#input_colA,#input_colB{height:418px}	}	@media (max-width: 320px){	#output_text,#input_colA,#input_colB{height:346px}	}  
