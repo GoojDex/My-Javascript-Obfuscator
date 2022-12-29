@@ -1,12 +1,12 @@
 {
-  "name": "My-Obfuscator",
-  "short_name": "My-Obfuscator",
+  "name": "My-Javascript-Obfuscator",
+  "short_name": "My-Javascript-Obfuscator",
   "description": "My JavaScript Obfuscator and Packer",
   "theme_color": "#b5e853",
   "background_color": "#151515",
   "display": "standalone",
-  "scope": "/My-Obfuscator/",
-  "start_url": "/My-Obfuscator/",
+  "scope": "/My-Javascript-Obfuscator/",
+  "start_url": "/My-Javascript-Obfuscator/",
   "icons": [
     {
       "src": "assets/images/icons/icon-72x72.png",
