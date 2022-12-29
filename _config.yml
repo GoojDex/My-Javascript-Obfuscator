@@ -1,12 +1,12 @@
-name: My-Obfuscator
-title: My-Obfuscator
-description: My JavaScript obfuscator and packer
-version: 1.12.0
+name: My-Javascript-Obfuscator
+title: My-Javascript-Obfuscator
+description: My JavaScript Obfuscator and Packer
+version: 3.12.1
 author: Dev Chandel
-author_email: Zzbaivong@gmail.com
+author_email: dev@gmail.com
 url: https://goojdex.github.io
-baseurl: /My-Obfuscator
-repository: GoojDex/My-Obfuscator
+baseurl: /My-Javascript-Obfuscator
+repository: GoojDex/My-Javascript-Obfuscator
 license: MIT
 
 theme: jekyll-theme-hacker
